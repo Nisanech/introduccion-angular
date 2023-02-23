@@ -1,18 +1,27 @@
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <h1 class="display-4 fw-normal">Pricing</h1>
+  <p class="fs-5 text-muted">
+    Quickly build an effective pricing table for your potential customers with
+    this Bootstrap example. It’s built with default Bootstrap components and
+    utilities with little customization.
+  </p>
+</div>
+
 <main>
   <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
     <div class="col">
       <div class="card mb-4 rounded-3 shadow-sm">
         <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">Free</h4>
+          <h4 class="my-0 fw-normal">{{ cStarter }}</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">
-            $0<small class="text-muted fw-light">/mo</small>
+            ${{ pStarter }}<small class="text-muted fw-light">/mo</small>
           </h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>10 users included</li>
             <li>2 GB of storage</li>
-            <li>Email support</li>
+            <li>Email support: {{ emailUno }}</li>
             <li>Help center access</li>
           </ul>
           <button type="button" class="w-100 btn btn-lg btn-outline-primary">
@@ -24,16 +33,16 @@
     <div class="col">
       <div class="card mb-4 rounded-3 shadow-sm">
         <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">Pro</h4>
+          <h4 class="my-0 fw-normal">{{ cSuperPremium }}</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">
-            $15<small class="text-muted fw-light">/mo</small>
+            ${{ pSuperPremium }}<small class="text-muted fw-light">/mo</small>
           </h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>20 users included</li>
             <li>10 GB of storage</li>
-            <li>Priority email support</li>
+            <li>Priority email support: {{ emailDos }}</li>
             <li>Help center access</li>
           </ul>
           <button type="button" class="w-100 btn btn-lg btn-primary">
@@ -45,16 +54,17 @@
     <div class="col">
       <div class="card mb-4 rounded-3 shadow-sm border-primary">
         <div class="card-header py-3 text-white bg-primary border-primary">
-          <h4 class="my-0 fw-normal">Enterprise</h4>
+          <h4 class="my-0 fw-normal">{{ cUltimatePremium }}</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">
-            $29<small class="text-muted fw-light">/mo</small>
+            ${{ pUltimatePremium
+            }}<small class="text-muted fw-light">/mo</small>
           </h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>30 users included</li>
             <li>15 GB of storage</li>
-            <li>Phone and email support</li>
+            <li>Phone and email support: {{ emailtres }}</li>
             <li>Help center access</li>
           </ul>
           <button type="button" class="w-100 btn btn-lg btn-primary">
@@ -72,9 +82,9 @@
       <thead>
         <tr>
           <th style="width: 34%"></th>
-          <th style="width: 22%">Free</th>
-          <th style="width: 22%">Pro</th>
-          <th style="width: 22%">Enterprise</th>
+          <th style="width: 22%">{{ cStarter }}</th>
+          <th style="width: 22%">{{ cSuperPremium }}</th>
+          <th style="width: 22%">{{ cUltimatePremium }}</th>
         </tr>
       </thead>
       <tbody>
